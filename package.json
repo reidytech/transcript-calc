@@ -1,0 +1,27 @@
+{
+  "name": "shstranscript",
+  "version": "1.0.0",
+  "description": "SHS Transcript Resolve for Student Graduation Requirements",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chris Reidy",
+  "license": "ISC",
+  "devDependencies": {
+    "angular": "^1.6.3",
+    "angular-ui-bootstrap": "^2.5.0",
+    "angular-ui-router": "^0.4.2",
+    "angular-uploads": "^1.0.5",
+    "bower": "^1.8.0",
+    "browserify": "^14.1.0",
+    "csv-tools": "^1.0.2",
+    "express": "^4.15.2",
+    "git": "^0.1.5",
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "http-server": "^0.9.0",
+    "node-sass": "^4.5.1",
+    "protractor": "^5.1.1"
+  }
+}
