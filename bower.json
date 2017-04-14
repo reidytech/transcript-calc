@@ -1,0 +1,37 @@
+{
+  "name": "shstranscript",
+  "description": "SHS Transcript Resolve for Student Graduation Requirements",
+  "main": "app.js",
+  "authors": [
+    "Chris Reidy"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "shs",
+    "transcript",
+    "transcript",
+    "resolve",
+    "transcript"
+  ],
+  "homepage": "https://github.com/reidytech/transcript-calc",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1",
+    "angular-csv-service": "^0.1.0",
+    "angular": "^1.6.3",
+    "angular-ui-router": "^0.4.2",
+    "angular-ui-bootstrap": "^2.5.0",
+    "angular-formly": "8.4.1",
+    "angular-sanitize": "1.6.3",
+    "angular-route": "1.6.3",
+    "angular-animate": "1.6.3"
+  }
+}

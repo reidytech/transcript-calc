@@ -1,33 +1,37 @@
-var creditApp = angular.module('creditApp', ['ngRoute']);
+var creditApp = angular.module('creditApp', ['fCsv', 'ui.router', 'ngAnimate', 'formly']);
 
 creditApp.value("CourseCollection", []);
 
-creditApp.config(['$routeProvider', function($routeProvider){
-  $routeProvider
-    .when('/home',
+creditApp.run(['$state', function ($state) {
+   $state.transitionTo('home');
+}]);
+
+
+creditApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
+  $stateProvider.state("home", 
      {
        controller:'CreditController',
-       templateUrl: 'templates/index.html'
+       templateUrl: 'templates/home.html'
      })
-    .when('/english',
+   $stateProvider.state('english', 
       {
         controller: 'EnglishController',
         templateUrl: 'templates/english.html'
       })
-      .when('/math',
+   $stateProvider.state('math', 
       {
         controller: 'MathController',
         templateUrl:'templates/math.html'
       })
-      .when('/history',
+    $stateProvider.state('history', 
       {
         controller: 'HistoryController',
         templateUrl:'templates/history.html'
       })
-      .when('/science',
+    $stateProvider.state('science',
       {
         controller: 'ScienceController',
         templateUrl:'templates/science.html'
       })
-      .otherwise({redirectTo: 'home'});
+      $urlRouterProvider.otherwise("home");
 }]);

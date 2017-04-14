@@ -1,9 +1,13 @@
-creditApp.controller('CreditController', function($scope){
-
+creditApp.controller('CreditController', function($scope, fCsv){
+  
+ $scope.getCsv = function(){ 
+  $http.get('csv/student-list/student-list.csv').then(function(resp) {
+    var myJsonString = fCsv.toJson(resp.data);
+    console.log(myJsonString);
+   });
+ };
   $scope.heightDiff;
-
 });
-
 
 creditApp.controller('EnglishController', ['$scope', 'CourseConstructor', function($scope, CourseConstructor){
 $scope.en1 = new CourseConstructor("en1", false, "English 1", 5, "English");

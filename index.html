@@ -1,85 +1,42 @@
 <!DOCTYPE html>
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<head>
-  <link rel = "stylesheet" type = "text/css" href = "css/styles.css">
-  <title> Credit and Graduation Requirement Calculator </title>
+    <head>
+        <title>
+            SHS Graduation Credit Requirement Calculator
+        </title>
+ <!-- bower:js -->
+ <script src="src/lib/jquery/dist/jquery.js"></script>
+ <script src="src/lib/bootstrap/dist/js/bootstrap.js"></script>
+ <script src="src/lib/angular/angular.js"></script>
+ <script src="src/lib/angular-csv-service/angular-csv-service.js"></script>
+ <script src="src/lib/angular-ui-router/release/angular-ui-router.js"></script>
+ <script src="src/lib/api-check/dist/api-check.js"></script>
+ <script src="src/lib/angular-formly/dist/formly.js"></script>
+ <script src="src/lib/angular-sanitize/angular-sanitize.js"></script>
+ <script src="src/lib/angular-route/angular-route.js"></script>
+ <script src="src/lib/angular-animate/angular-animate.js"></script>
+ <!-- endbower -->
 
+ <!--app specific js-->
+ <script src="js/app.js"> </script>
+ <script src="js/controllers.js"> </script>
+ <script src="js/directives.js"> </script>
+ <script src="js/services.js"> </script>
+ <!--end app-specific-->
 
-    <script src="js/angular.min.js"></script>
-    <script src="js/angular-route.min.js"> </script>
-    <script src="js/papaparse.min.js"> </script>
-    <script src="js/app.js"> </script>
-    <script src="js/controllers.js"> </script>
-    <script src="js/directives.js"> </script>
-    <script src="js/services.js"> </script>
-
-</head>
+ <!--css-bootstrap-font-awesome-->       
+<link rel="stylesheet" type="text/css" href="src/lib/bootstrap/dist/css/bootstrap-theme.min.css">
+<link rel="stylesheet" type="text/css" href="src/lib/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" type"text/css" href="css/style.css"> 
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<link rel="stylesheet" type-"text/css" href="css/animations.css">
+<!--end stylesheets-->
+    
+    </head> 
 
 <body ng-app="creditApp">
-<div class = "tabtop">
-    <th>
-      Student Credit Evaluation
-    </th>
-</div>
-
-<div class="section group">
-
-  <div class="col span_1_of_3" id="leftCol">
-    <table>
-         <div class = "headTable">  <th> Step 1: Enter Name of Student Below </th> </div> 
-           <div id="headingName"> Student Name: <div> <input class="p1Heading" id="stInput" type = "text" ng-model="student"> </div> </div>  
-    </table>
-</div>
-
-
- 
-<div master class="col span_1_of_3" id="leftCol">
-   <div  class = "p1Heading" style="word-wrap:break-word;">  Analyze Transcript For:  <br/> <span style="width: 50%; text-align:center;"> {{student}} </span> </div> 
-  <button class = "selectButton"> Select Student </button>
-
-</div>
-
-
-<!---<div class = "yearList" ng-init="years=['Freshman', 'Sophomore', 'Junior', 'Senior']">
-<ul>
-<li ng-repeat="year in years"> {{year}} </li>
-</ul>
-</div> -->
-
-	<div class="col span_1_of_3" ng-style="style">
-	  <div class = "p1Heading"> 
-      Transcript Parsed Correctly? Display Results Below: </div> <br/>
-     <!-- <div class="loader">Loading...</div> -->
-     <div> {{fileContent}} </div>
-	</div>
-  </div>
-
-  
-
-  <div class = "col span_3_of_3" style="height:5vw;"> 
-    <HR COLOR="white" WIDTH="80%" SIZE="1">
-    <HR COLOR="grey" WIDTH="80%" SIZE="1">
-    <HR COLOR="black" WIDTH="80%" SIZE="1">
-  </div>
-</div>
-</div>
-
-
-<div class="section group">
-  <div class = "col span_1_of_3" style="height:5vw;">
-<a href="#english"> English </a> <br>
-<a href="#math"> Math </a> <br>
-<a href="#science"> Science </a> <br>
-<a href="#history"> History </a> <br>
-  </div>
-  </div>
-
-
-<div ng-view> </div>
-
-
-
+    <ui-view> </ui-view>
 
 
 </body>
